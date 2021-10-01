@@ -60,16 +60,39 @@
   が成り立つので, $f \circ g = \id_B$, $g \circ f = \id_A$.
 \end{ans}
 
+\begin{ans}
+  (1) $c \in C$を任意に取る.
+  $g$の全射性から$g(b) = c$となる$b \in B$があり,
+  さらに$f$の全射性から$f(a) = b$となる$a \in A$がある.
+  すなわち$g \circ f(a) = c$となる$a \in A$がある.
+  (2) $g \circ f(a) = g \circ f(a^\prime)$であるとする.
+  このとき$g$の単射性から$f(a) = f(a^\prime)$,
+  さらに$f$の単射性から$a = a^\prime$.
+  (3) $g \circ f$が全射なので, 任意の$c \in C$に対して
+  $g \circ f(a) = c$となる$a \in A$がある.
+  すなわち$g(f(a)) = c$となる$f(a) \in B$がある.
+  (4) $f(a) = f(a^\prime)$であるとする.
+  このとき$g \circ f(a) = g \circ f(a^\prime)$であり,
+  $g \circ f$の単射性より$a = a^\prime$.
+\end{ans}
+
+\begin{ans}
+  (全射$\Rightarrow \forall S\ f(f^{-1}(S)) = S$).
+  まず$f(f^{-1}(S)) \subset S$を示す.
+  $b \in f(f^{-1}(S))$ならば,
+  $f(a) = b,\ a \in f^{-1}(S)$となる$a$が存在する.
+  逆像の定義から$f(a) \in S$なので, $b \in S$.
+  (注意: ここでは$f$の全射性は用いなかった.)
+  次に$f(f^{-1}(S)) \supset S$を示す.
+  $b \in S$であるとすると, $f$の全射性から$f(a) = b$となる$a \in A$がある.
+  $a \in f^{-1}(S)$なので, $b \in f(f^{-1}(S))$.
+  \\
+  ($\forall S\ f(f^{-1}(S)) = S \Rightarrow$全射).
+  任意の$b \in B$に対して$\{b\} \subset f(f^{-1}(\{b\})) \subset f(A)$.
+\end{ans}
+
 \fakesubsection{1.2 well-definedと自然な対象}
 
-\begin{ans}
-  test
-\end{ans}
-
 \fakesubsection{1.3 選択公理とツォルンの補題}
-
-\begin{ans}
-  test
-\end{ans}
 
 \end{document}
