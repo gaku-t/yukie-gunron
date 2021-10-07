@@ -22,6 +22,7 @@
 }
 
 \DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\tr}{tr}
 
 
 \begin{document}
@@ -147,6 +148,18 @@
 \end{ans}
 
 \fakesubsection{1.2 well-definedと自然な対象}
+
+\begin{ans}
+  線形写像$f:V \rightarrow V$に対してトレース$\tr(f)$を
+  $f$の行列表示$M = (m_{ij}) \in M_n(\mathbb{R})$を$1$つとって
+  $\tr(f) = \tr(M) = \Sigma_{i = 1}^n m_{ii}$と定義したいとする.
+  このとき, $\tr(f)$がwell-definedであること,
+  すなわち行列表示のとり方によらず$\tr(f)$が定まるかどうかが問題となる.
+  これがwell-definedであることは, 行列のトレースについて$\tr(AB) = \tr(BA)$が成り立つことを用いて,
+  別の基底での$f$の行列表示$P^{-1}MP$について
+  $\tr(P^{-1}MP) = \tr(MPP^{-1}) = \tr(M)$
+  であることからしたがう.
+\end{ans}
 
 \fakesubsection{1.3 選択公理とツォルンの補題}
 
