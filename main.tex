@@ -167,4 +167,39 @@
 
 \fakesubsection{1.3 選択公理とツォルンの補題}
 
+\begin{ans}
+  (1) $X$の全順序部分集合を任意に取り,
+  適当に添え字をつけて$\{(S_\lambda, f_\lambda)\}_{\lambda \in \Lambda}$
+  と書くことにする.
+  (上界の候補として) $S = \bigcup_{\lambda \in \Lambda} S_\lambda$と定めて,
+  写像$f: S \rightarrow B$を,
+  任意の$x \in S$に対して$x \in S_\lambda$なる$\lambda$を$1$つとって$f(x) = f_\lambda(x)$
+  として定義したい. まずこれがwell-definedであることを見るために,
+  別の$\lambda^\prime$に対して$x \in S_\lambda^\prime$であるとする.
+  このとき$\{(S_\lambda, f_\lambda)\}_{\lambda \in \Lambda}$が全順序であることから,
+  「$S_\lambda \subset S_{\lambda^\prime}$かつ$f_{\lambda^\prime}$は$f_\lambda$の拡張」(またはここで$\lambda$と$\lambda^\prime$を入れ替えたもの)
+  が成り立つ. よって$f_\lambda(x) = f_{\lambda^\prime}(x)$なので,
+  $f$は$\lambda$のとり方によらず, well-definedである.
+  つぎに$f$が単射であることをみる.
+  $f(x) = f(y)$とすると, ある$\lambda$, $\lambda^{\prime}$に対して
+  $f_\lambda(x) = f_{\lambda^\prime}(y)$である.
+  $\{(S_\lambda, f_\lambda)\}_{\lambda \in \Lambda}$が全順序であることから
+  一方は他方の拡張であり, $f_\lambda(x) = f_\lambda(y)$または$f_{\lambda^\prime}(x) = f_{\lambda^\prime}(y)$.
+  いずれの場合も$f_\lambda, f_{\lambda^\prime}$が単射であることから$x = y$.
+  したがって$f$は単射である.
+  さらに$(S, f)$が$\{(S_\lambda, f_\lambda)\}_{\lambda \in \Lambda}$の上界であることをみる.
+  任意の$\lambda \in \Lambda$に対して
+  $S_\lambda \subset S$であり, また$x \in S_\lambda$ならば$f(x) = f_\lambda(x)$が成り立つ.
+  よって$(S_\lambda, f_\lambda) \le (S, f)$なので, $(S, f)$は上界である.
+  以上により, $X$の任意の全順序部分集合が上界を持つことが示せたから,
+  ツォルンの補題が適用でき, $X$に極大元が存在することがわかる.\\
+  (2) $S_0 \neq A$かつ$f_0(S_0) \neq B$であると仮定して矛盾を導く.
+  $a \in A \setminus S_0$と$b \in B \setminus f_0(S_0)$をとり,
+  $f: S_0 \cup \{a\} \rightarrow B$を,
+  $S_0$上では$f = f_0$, $f(a) = b$と定めると,
+  $(S_0 \cup \{a\}, f) \in X$かつ$(S_0, f_0) < (S_0 \cup \{a\}, f)$となって,
+  $(S_0, f_0)$が極大元であることと矛盾する.
+  したがって$S_0 = A$または$f_0(S_0) = B$.
+\end{ans}
+
 \end{document}
