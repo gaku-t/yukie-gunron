@@ -3,6 +3,7 @@
 \usepackage{amsmath, amssymb}
 \usepackage{commath}
 \usepackage{bm}
+\usepackage{mathtools}
 
 \theoremstyle{definition}
 \newtheorem{ans}{}
@@ -24,6 +25,7 @@
 \DeclareMathOperator{\id}{id}
 \DeclareMathOperator{\tr}{tr}
 
+\newcommand{\transpose}[1]{{\prescript{t}{}{#1}}}
 
 \begin{document}
 
@@ -313,6 +315,16 @@
   よって, $1_G = x_0^{-1}x_0 \in H$. すなわち条件 (1) が成り立つ.
   $x \in H$ならば, $x, 1_G \in H$について$x^{-1} = x^{-1}1_G \in H$. すなわち条件 (2) が成り立つ.
   $x, y \in H$ならば, $x^{-1} \in H$なので$xy = (x^{-1})^{-1}y \in H$. すなわち条件 (3) が成り立つ.
+\end{ans}
+
+\begin{ans}
+  $\transpose{I_{2n}}J_nI_{2n} = J_n$より, $I_{2n} \in H$.
+  $h_1, h_2 \in H$ならば,
+  $\transpose{(h_1h_2)}J_n(h_1h_2) = \transpose{h_2}(\transpose{h_1}J_nh_1)h_2 = \transpose{h_2}J_nh_2 = J_n$より
+  $h_1h_2 \in H$.
+  また, $h \in H$ならば,
+  $\transpose{(h^{-1})}J_nh^{-1} = \transpose{(h^{-1})}(\transpose{h}J_nh)h^{-1} = J_n$.
+  よって$h^{-1} \in H$.
 \end{ans}
 
 \end{document}
