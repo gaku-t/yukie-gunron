@@ -26,6 +26,8 @@
 \DeclareMathOperator{\tr}{tr}
 
 \newcommand{\transpose}[1]{{\prescript{t}{}{#1}}}
+\newcommand{\Sp}[1]{\mathrm{Sp}(#1)}
+\newcommand{\U}[1]{\mathrm{U}(#1)}
 
 \begin{document}
 
@@ -318,13 +320,28 @@
 \end{ans}
 
 \begin{ans}
-  $\transpose{I_{2n}}J_nI_{2n} = J_n$より, $I_{2n} \in H$.
-  $h_1, h_2 \in H$ならば,
+  $\transpose{I_{2n}}J_nI_{2n} = J_n$より, $I_{2n} \in \Sp{2n}$.
+  $h_1, h_2 \in \Sp{2n}$ならば,
   $\transpose{(h_1h_2)}J_n(h_1h_2) = \transpose{h_2}(\transpose{h_1}J_nh_1)h_2 = \transpose{h_2}J_nh_2 = J_n$より
-  $h_1h_2 \in H$.
-  また, $h \in H$ならば,
+  $h_1h_2 \in \Sp{2n}$.
+  また, $h \in \Sp{2n}$ならば,
   $\transpose{(h^{-1})}J_nh^{-1} = \transpose{(h^{-1})}(\transpose{h}J_nh)h^{-1} = J_n$.
-  よって$h^{-1} \in H$.
+  よって$h^{-1} \in \Sp{2n}$.
+\end{ans}
+
+\begin{ans}
+  $\overline{AB} = \overline{A}\,\overline{B}$であることに注意する.
+  (このことから, $\overline{g}^{-1} = \overline{g^{-1}}$であることも分かる.)
+  $\transpose{\overline{I_n}I_n} = I_nI_n = I_n$より$I_n \in \U{n}$.
+  $h_1, h_2 \in \U{n}$ならば,
+  $\transpose{\overline{h_1h_2}}h_1h_2
+  = \transpose{\overline{h_2}}\,\transpose{\overline{h_1}}h_1h_2
+  = \transpose{\overline{h_2}}I_nh_2 = I_n$より$h_1h_2 \in \U{n}$.
+  また, $h \in \U{n}$ならば,
+  $\transpose{\overline{h^{-1}}}h^{-1}
+  = \transpose{\overline{h}^{-1}}(\transpose{\overline{h}}h)h^{-1}
+  = I_nI_n = I_n$.
+  よって$h^{-1} \in \U{n}$.
 \end{ans}
 
 \end{document}
