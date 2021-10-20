@@ -344,4 +344,35 @@
   よって$h^{-1} \in \U{n}$.
 \end{ans}
 
+\begin{ans}
+  (1) 明らかに$I_n \in B$.
+  $b = (b_{ij}),\ b^\prime = (b^\prime_{ij})$をともにBの元とすると,
+  $bb^\prime$の$(i, j)$成分は$\Sigma_{k = 1}^nb_{ik}b^\prime_{kj}$である.
+  もし$i < j$ならば, どんな$k$に対しても$i < k$または$k < j$が成り立つので,
+  各項が$0$となり$bb^\prime$の$(i, j)$成分は$0$である. すなわち$bb^\prime \in B$.
+  $b \in B$とすると, $b$に
+  (i) 行を$\lambda (\neq 0)$倍する
+  (ii) 第$i$行に第$j$行の$\lambda$倍を足す ($i > j$),
+  という$2$つの操作 (基本変形の一部) を繰り返すことにより, 単位行列にできる.
+  これらの操作は$b$に$B$のある元を左から掛けることに対応しており, それらの積が$b^{-1}$に他ならない.
+  $B$が積で閉じていることはすでに示していたから, $b^{-1} \in B$.\\
+  (2) $n = 1$のとき$B = G = \mathbb{R}^\times$は可換群である.
+  $n \ge 2$のとき, $B$は可換群ではない. たとえば$n = 2$では
+  $\begin{pmatrix}
+    1 & 0 \\
+    1 & 1
+  \end{pmatrix}\begin{pmatrix}
+    1 & 0 \\
+    0 & 2
+  \end{pmatrix} \neq \begin{pmatrix}
+    1 & 0 \\
+    0 & 2
+  \end{pmatrix}\begin{pmatrix}
+    1 & 0 \\
+    1 & 1
+  \end{pmatrix}$.
+  一般の$n \ge 2$の場合にも, たとえば単位行列の定数倍でない対角行列と,
+  左下の成分がすべて$1$である行列との積は非可換である.
+\end{ans}
+
 \end{document}
