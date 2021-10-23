@@ -392,12 +392,26 @@
   $m^\prime = m + kn\ (k \in \mathbb{Z})$と書けるとき, またそのときに限るので,
   $H = \{1 = e^0, e^\frac{2\pi i}{n}, e^\frac{2\pi i \cdot 2}{n},..., e^\frac{2\pi i(n - 1)}{n}\}$.
   よって$H$の位数は$n$.
-  また, $e^\frac{2\pi i}{n}$が生成元なので, $H$は巡回群.
+  また, $\langle e^\frac{2\pi i}{n} \rangle = H$なので, $H$は巡回群.
 \end{ans}
 
 \begin{ans}
   (1) $\mathfrak{S}_3$は可換群ではないから巡回群ではない.
-  (別解: $\mathfrak{S}_3$には位数$2$の元が$3$つあるが, 巡回群$\mathbb{Z}/6\mathbb{Z}$には$1$つしかないから, 両者は一致しない.)
+  (別解: $\mathfrak{S}_3$には位数$2$の元が$3$つあるが, 巡回群$\mathbb{Z}/6\mathbb{Z}$には$1$つしかないから, 両者は一致しない.) \\
+  (2) $\mathbb{Q}$が巡回群であると仮定して, 生成元が$r \neq 0$であるとする.
+  このとき, $\mathbb{Q}$の任意の元は$nr\ (n \in \mathbb{Z})$という形で表せるはずだが, $\frac{r}{2} \in \mathbb{Q}$はそうではないので矛盾. \\
+  (3) $\mathbb{Q}$の場合と同様. (別解: 巡回群の濃度はたかだか可算だが, $\mathbb{R}$の濃度は非可算なので一致しない.) \\
+  (4) $\mathbb{Q}^\times$が巡回群であると仮定して, 生成元が$r$であるとする.
+  明らかに$r \neq \pm 1$である. $-r \in \mathbb{Q}^\times$なので,
+  $r^n = -r$, すなわち$r^{n-1} = -1$となるような$n \in \mathbb{Z}$が存在するはずである.
+  ところがこの式を満たすような$r$は$-1$しかないので矛盾.
+  \\
+  (5) $\mathbb{Z} \times \mathbb{Z}$が巡回群であると仮定して, 生成元が$(x, y)$であるとする.
+  $(nx, ny)\ (n \in \mathbb{Z})$が$\mathbb{Z} \times \mathbb{Z}$のすべての元を渉っている必要があるので,
+  $x, y$それぞれが$\mathbb{Z}$の生成元でなれけばならない. よって少なくとも$x \neq 0$である.
+  一方, $(x, y + 1) \in \mathbb{Z} \times \mathbb{Z}$を考えると,
+  $(x, y + 1) = (nx, ny)$を満たす$n \in \mathbb{Z}$が存在するはずだが,
+  $x = nx$かつ$x \neq 0$より$n = 1$. 一方第$2$成分は$y + 1 \neq y$となり矛盾.
 \end{ans}
 
 \end{document}
