@@ -201,7 +201,7 @@
   $a \in A \setminus S_0$と$b \in B \setminus f_0(S_0)$をとり,
   $f: S_0 \cup \{a\} \rightarrow B$を,
   $S_0$上では$f = f_0$, $f(a) = b$と定めると,
-  $(S_0 \cup \{a\}, f) \in X$かつ$(S_0, f_0) < (S_0 \cup \{a\}, f)$となって,
+  $(S_0 \cup \{a\}, f) \in X$かつ$(S_0, f_0) \leq (S_0 \cup \{a\}, f)$かつ$(S_0, f_0) \neq (S_0 \cup \{a\}, f)$となって,
   $(S_0, f_0)$が極大元であることと矛盾する.
   したがって$S_0 = A$または$f_0(S_0) = B$.
 \end{ans}
@@ -412,6 +412,17 @@
   一方, $(x, y + 1) \in \mathbb{Z} \times \mathbb{Z}$を考えると,
   $(x, y + 1) = (nx, ny)$を満たす$n \in \mathbb{Z}$が存在するはずだが,
   $x = nx$かつ$x \neq 0$より$n = 1$. 一方第$2$成分は$y + 1 \neq y$となり矛盾.
+\end{ans}
+
+\begin{ans}
+  (1) 数学的帰納法により示す. $n = 1$のときは明らか.
+  $n = k$のときに正しいとして, $n = k + 1$の場合を示す.
+  任意の$\sigma \in \mathfrak{S}_{k + 1}$をとり.
+  $\sigma(1) = i$であるとする.
+  $\tau = (1\ 2)(2\ 3)\cdots(i-1\ i)\sigma$とおけば$\tau(1) = 1$であるから,
+  $n = k$の場合に帰着できる. よって$n = k + 1$の場合にも正しい. \\
+  (2) $(1\ 2\ \cdots\ n)^{-(i-1)}(1\ 2)(1\ 2\ \cdots\ n)^{i-1} = (i\ i + 1)$なので,
+  (1) よりこれらも$\mathfrak{S}_n$を生成する.
 \end{ans}
 
 \end{document}
