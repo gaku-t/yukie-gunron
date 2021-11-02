@@ -489,4 +489,54 @@
   $gh = (gh)^{-1} = h^{-1}g^{-1} = hg$.
 \end{ans}
 
+\begin{ans}
+  (1) $g^2 = \begin{pmatrix}
+    -1 & 0 \\
+    0 & -1
+  \end{pmatrix},\
+  g^4 = \begin{pmatrix}
+    1 & 0 \\
+    0 & 1
+  \end{pmatrix}$.
+  よって$g$の位数は$4$の約数であり, かつ$1$, $2$ではないから, 位数は$4$.
+  また$h$については,
+  $h^2 = \begin{pmatrix}
+    0 & 1 \\
+    -1 & -1
+  \end{pmatrix},\
+  h^3 = \begin{pmatrix}
+    -1 & 0 \\
+    0 & -1
+  \end{pmatrix},\
+  h^6 = \begin{pmatrix}
+    1 & 0 \\
+    0 & 1
+  \end{pmatrix}$.
+  よって位数は$6$の約数であり, かつ$1$, $2$, $3$ではないから, 位数は$6$.\\
+  (2) $gh = \begin{pmatrix}
+    1 & 0 \\
+    1 & 1
+  \end{pmatrix} = \begin{pmatrix}
+    1 & 0 \\
+    0 & 1
+  \end{pmatrix} + \begin{pmatrix}
+    0 & 0 \\
+    1 & 0
+  \end{pmatrix}$
+  と分解できるが, $\begin{pmatrix}
+    0 & 0 \\
+    1 & 0
+  \end{pmatrix}^2 = 0$であることに注意すると, 任意の正の整数$n$に対して
+  $(gh)^n = \begin{pmatrix}
+    1 & 0 \\
+    0 & 1
+  \end{pmatrix} + n \cdot \begin{pmatrix}
+    0 & 0 \\
+    1 & 0
+  \end{pmatrix} \neq \begin{pmatrix}
+    1 & 0 \\
+    0 & 1
+  \end{pmatrix}$.
+\end{ans}
+
 \end{document}
