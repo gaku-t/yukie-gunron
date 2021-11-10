@@ -668,4 +668,25 @@
   $なので, $\mathrm{SL}_2(\mathbb{C})$では共役である.
 \end{ans}
 
+\begin{ans}
+  $G = \mathbb{Z}/15\mathbb{Z}$の場合のみを考える. (他も同様である.)
+  自己準同型$\phi: G \rightarrow G$は,
+  $1$つの生成元での値$\phi(\overline{1})$を与えれば一意に定まる.
+  そうして定めた$\phi$が同型であるための必要十分条件は, $\phi(\overline{1})$がまた$G$の生成元であることである.
+  $G$の生成元は演習問題2.4.7で求めたとおり,
+  $\overline{1}, \overline{2}, \overline{4}, \overline{7}, \overline{8}, \overline{11}, \overline{13}, \overline{14}$
+  の$8$通りなので, $\mathrm{Aut}(G)$の位数は$8$.
+  また, $\overline{1} \mapsto \overline{k}$なる自己同型は$x \mapsto \overline{k}x$と書けるので,
+  明らかに$\mathrm{Aut}(G)$はアーベル群である.
+  有限アーベル群の基本定理 (定理4.8.1) より,
+  $\mathrm{Aut}(G) \cong \mathbb{Z}/8\mathbb{Z}$
+  または
+  $\mathrm{Aut}(G) \cong \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/4\mathbb{Z}$
+  または
+  $\mathrm{Aut}(G) \cong \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$
+  であるが, $\mathrm{Aut}(G)$に単一の生成元がないこと,
+  および$\overline{1} \mapsto \overline{2}$なる自己同型の位数が$4$であることが計算により確かめられるので,
+  $\mathrm{Aut}(G) \cong \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/4\mathbb{Z}$.
+\end{ans}
+
 \end{document}
