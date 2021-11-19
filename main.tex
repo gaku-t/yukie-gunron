@@ -796,4 +796,86 @@
   (メモ2) (4) の後半を使っていないので, (5) は想定解答ではなさそうな気がする.
 \end{ans}
 
+\fakesubsection{正規部分群と剰余群}
+
+\begin{ans}
+  (1) 正規部分群でない. $g = (3\ 4)$, $h = (1\ 2)$とおくと$h \in H$で
+  $ghg^{-1} = (3\ 4)(1\ 3)(3\ 4) = (1\ 4) \notin H$.\\
+  (2) 正規部分群でない.
+  $g = \begin{pmatrix}
+    1 & 0 \\
+    0 & 2
+  \end{pmatrix}$, $h = \begin{pmatrix}
+    \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
+    - \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}
+  \end{pmatrix}$とおくと
+  \begin{align*}
+    ghg^{-1} &= \begin{pmatrix}
+      1 & 0 \\
+      0 & 2
+    \end{pmatrix}\begin{pmatrix}
+      \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
+      - \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}
+    \end{pmatrix}\begin{pmatrix}
+      1 & 0 \\
+      0 & \frac{1}{2}
+    \end{pmatrix} = \begin{pmatrix}
+      \frac{1}{\sqrt{2}} & \frac{1}{2\sqrt{2}} \\
+      - \sqrt{2} & \frac{1}{\sqrt{2}}
+    \end{pmatrix} \\
+    \transpose{(ghg^{-1})}(ghg^{-1}) &= \begin{pmatrix}
+      \frac{1}{\sqrt{2}} & - \sqrt{2} \\
+      \frac{1}{2\sqrt{2}} & \frac{1}{\sqrt{2}}
+    \end{pmatrix}\begin{pmatrix}
+      \frac{1}{\sqrt{2}} & \frac{1}{2\sqrt{2}} \\
+      - \sqrt{2} & \frac{1}{\sqrt{2}}
+    \end{pmatrix} \neq I_n
+  \end{align*}
+  したがって$ghg^{-1} \notin H$.\\
+  (3) 正規部分群でない.
+  $g = \begin{pmatrix}
+    1 & 0 \\
+    0 & i
+  \end{pmatrix}$, $h = \begin{pmatrix}
+    1 & 1 \\
+    0 & 1
+  \end{pmatrix}$とおくと,
+  \[
+    ghg^{-1} = \begin{pmatrix}
+      1 & 0 \\
+      0 & i
+    \end{pmatrix}\begin{pmatrix}
+      1 & 1 \\
+      0 & 1
+    \end{pmatrix}\begin{pmatrix}
+      1 & 0 \\
+      0 & -i
+    \end{pmatrix} = \begin{pmatrix}
+      1 & -i \\
+      0 & 1
+    \end{pmatrix} \notin \mathrm{GL}_2(\mathbb{R})
+  \]
+  (4) 正規部分群である. $(1\ 2)(3\ 4)(1\ 3)(2\ 4) = (1\ 4)(2\ 3)$より,
+  $H$は$(1\ 2)(3\ 4)$と$(1\ 3)(2\ 4)$で生成される.
+  また演習問題2.3.9より, $G$は$(1\ 2\ 3\ 4)$と$(1\ 2)$で生成される.
+  命題2.8.7より, $h = (1\ 2)(3\ 4), (1\ 3)(2\ 4)$と$g = (1\ 2\ 3\ 4), (1\ 2)$の組み合わせについて
+  $ghg^{-1} \in H$であることを見ればよい:
+  \begin{align*}
+    (1\ 2\ 3\ 4)(1\ 2)(3\ 4)(1\ 2\ 3\ 4)^{-1} = (1\ 4)(2\ 3) \in H\\
+    (1\ 2)(1\ 2)(3\ 4)(1\ 2)^{-1} = (1\ 2)(3\ 4) \in H\\
+    (1\ 2\ 3\ 4)(1\ 3)(2\ 4)(1\ 2\ 3\ 4)^{-1} = (1\ 3)(2\ 4) \in H \\
+    (1\ 2)(1\ 3)(2\ 4)(1\ 2)^{-1} = (1\ 4)(2\ 3) \in H
+  \end{align*}
+  (5) 正規部分群である. $g = \begin{pmatrix}
+    g_{11} & 0 \\
+    g_{21} & g_{22}
+  \end{pmatrix}$, $h = \begin{pmatrix}
+    h_{11} & 0 \\
+    h_{21} & h_{11}
+  \end{pmatrix}$とおくと,
+  $ghg^{-1}$の$(1, 1)$成分は$g_{11}h_{11}g_{11}^{-11} = h_{11}$,
+  $(2, 2)$成分は$g_{22}h_{11}g_{22}^{-1} = h_{11}$であるから,
+  $ghg^{-1} \in H$.
+\end{ans}
+
 \end{document}
