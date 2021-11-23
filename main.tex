@@ -29,6 +29,10 @@
 \newcommand{\Sp}[1]{\mathrm{Sp}(#1)}
 \newcommand{\U}[1]{\mathrm{U}(#1)}
 
+\DeclarePairedDelimiter{\gen}{\langle}{\rangle}
+\DeclarePairedDelimiter{\order}{\lvert}{\rvert}
+
+
 \begin{document}
 
 \fakesection{第1章 集合論}
@@ -392,7 +396,7 @@
   $m^\prime = m + kn\ (k \in \mathbb{Z})$と書けるとき, またそのときに限るので,
   $H = \{1 = e^0, e^\frac{2\pi i}{n}, e^\frac{2\pi i \cdot 2}{n},..., e^\frac{2\pi i(n - 1)}{n}\}$.
   よって$H$の位数は$n$.
-  また, $\langle e^\frac{2\pi i}{n} \rangle = H$なので, $H$は巡回群.
+  また, $\gen{e^\frac{2\pi i}{n}} = H$なので, $H$は巡回群.
 \end{ans}
 
 \begin{ans}
@@ -899,15 +903,31 @@
   $2$と$3$は素数なので, これらに対応する部分群は巡回群のみである.
   したがって, 部分群は
   $\{1\}$, $\mathfrak{S}_3$,
-  $\langle(1\ 2)\rangle$, $\langle(2\ 3)\rangle$, $\langle(1\ 3)\rangle$,
-  $\langle(1\ 2\ 3)\rangle$
+  $\gen{(1\ 2)}$, $\gen{(2\ 3)}$, $\gen{(1\ 3)}$,
+  $\gen{(1\ 2\ 3)}$
   で尽くされる.
   これらの部分群のうち, $\{1\}$と$\mathfrak{S}_3$は明らかに正規部分群である.
-  また$\langle(1\ 2\ 3)\rangle$は指数$2$の部分群であるから,
+  また$\gen{(1\ 2\ 3)}$は指数$2$の部分群であるから,
   演習問題2.8.2より正規部分群である.
   これら以外は正規部分群ではない. 例えば
-  $(2\ 3)(1\ 2)(2\ 3)^{-1} = (1\ 3) \notin \langle(1\ 2)\rangle$
-  より$\langle(1\ 2)\rangle$が正規部分群でないことが分かる. 他も同様.
+  $(2\ 3)(1\ 2)(2\ 3)^{-1} = (1\ 3) \notin \gen{(1\ 2)}$
+  より$\gen{(1\ 2)}$が正規部分群でないことが分かる. 他も同様.
+\end{ans}
+
+\begin{ans}
+  四元数群を$G$と書くことにする.
+  $G$の位数は$8$なので, 部分群の位数は$1, 2, 4, 8$のいずれかである.
+  このうち位数が$1, 8$であるのは$\{1\}, G$である.
+  それ以外の位数が$2$または$4$の部分群$H$について, もし$i \in H$ならば, $\gen{i} \subset H$であるが,
+  $\order{\gen{i}} = 4$より$H = \gen{i}$である.
+  $j, k$についても同様.
+  $i, j, k \notin H$で$H \neq \{1\}$であるようなものは$H = \gen{-1}$のみである.
+  以上により, $G$の部分群は$\{1\}, \gen{-1}, \gen{i}, \gen{j}, \gen{k}, G$である.
+  これらの部分群のうち, 明らかに$\{1\}$と$G$は正規部分群である.
+  また$\gen{i}, \gen{j}, \gen{k}$は指数$2$なので,
+  演習問題2.8.2より正規部分群である.
+  $\gen{-1}$が正規部分群であることも容易に確かめられる.
+  以上により, $G$の部分群$\{1\}, \gen{-1}, \gen{i}, \gen{j}, \gen{k}, G$はすべて正規部分群である.
 \end{ans}
 
 \end{document}
