@@ -1012,4 +1012,18 @@
   $nx = nx_i + nh \in H$. よって$nG \subset H$.
 \end{ans}
 
+\begin{ans}
+  一般に, $G$の指数$p$の部分群の数を求める.
+  $H$を$G$の指数$p$の部分群とすると, 前問より$H$は$pG$を含む.
+  そこで, 例題2.10.12と同様に, $H$は$G/pG$の指数$p$の部分群と1対1に対応する.
+  $G/pG \cong \mathbb{Z}/p\mathbb{Z} \times \mathbb{Z}/p\mathbb{Z}$であるから,
+  $\mathbb{Z}/p\mathbb{Z} \times \mathbb{Z}/p\mathbb{Z}$の指数$p$の, すなわち位数$p$の部分群の数を求めればよい.
+  この部分群は巡回部分群であり, $\langle(x, y)\rangle$ と書ける.
+  $x = \overline{0}$であるようなものは, $\langle(\overline{0}, \overline{1})\rangle$のみである.
+  $x \neq \overline{0}$の場合は, $x = \overline{1}$と仮定しても一般性を失わない.
+  このとき$y$の取りうる値は$y = \overline{0}, \overline{1},..., \overline{p-1}$の$p$通りであるが,
+  これらすべてについて, 生成される部分群が互いに異なることは明らかである.
+  したがって, 指数$p$の部分群の数は$p + 1$個である.
+\end{ans}
+
 \end{document}
