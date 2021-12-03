@@ -1034,4 +1034,45 @@
   したがって例題2.10.12と同様にして, $G$の指数$2$の部分群の個数は$3$である.
 \end{ans}
 
+\begin{ans}
+  (1) $G = \mathbb{Z}/12\mathbb{Z}$とおく. $\abs{G} = 12$なので, 部分群の位数の候補は$1, 2, 3, 4, 6, 12$である.
+  これらのうち, $1, 12$にはそれぞれ自明な部分群$\{0\}, G$が対応する.
+  また, 中国剰余定理より$G \cong \mathbb{Z}/3\mathbb{Z} \times \mathbb{Z}/4\mathbb{Z}$である.
+  以下, $G$の部分群$H$の位数が$2, 3, 4, 6$の場合を考える.\\
+  \underline{位数$2$の場合}:
+  $H$は巡回群で, ある元$(\overline{a}, \overline{b}) \in \mathbb{Z}/3\mathbb{Z} \times \mathbb{Z}/4\mathbb{Z}$で生成される.
+  $2\overline{a} = \overline{0}\ (\in \mathbb{Z}/3\mathbb{Z})$より$\overline{a} = \overline{0}$.
+  よって$\overline{b} \in \mathbb{Z}/4\mathbb{Z}$の位数が$2$なので,
+  $(\overline{a}, \overline{b}) = (\overline{0}, \overline{2})$.
+  逆に, $\langle (\overline{0}, \overline{2}) \rangle$は位数$2$の部分群なので,
+  これが位数$2$の唯一の部分群である.\\
+  \underline{位数$3$の場合}:
+  $H$は巡回群で, ある元$(\overline{a}, \overline{b}) \in \mathbb{Z}/3\mathbb{Z} \times \mathbb{Z}/4\mathbb{Z}$で生成される.
+  $3\overline{b} = \overline{0}\ (\in \mathbb{Z}/4\mathbb{Z})$より$\overline{b} = \overline{0}$.
+  よって$H$は$\mathbb{Z}/3\mathbb{Z}$の部分群と同型であるが, 位数の比較により, $\mathbb{Z}/3\mathbb{Z}$自体と同型である.
+  すなわち位数$3$の部分群は$\langle (\overline{1}, \overline{0}) \rangle$のみである.\\
+  \underline{位数$4$の場合}:
+  $(\overline{a}, \overline{b}) \in H$とすると,
+  $4\overline{a} = \overline{0}\ (\in \mathbb{Z}/3\mathbb{Z})$より$\overline{a} = 0$.
+  あとは位数$3$の場合と同様の議論により, 位数$4$の部分群は$\langle (\overline{0}, \overline{1}) \rangle$のみである.\\
+  \underline{位数$6$の場合}:
+  $(\overline{a}, \overline{b}) \in H$とすると,
+  $6\overline{b} = \overline{0}\ (\in \mathbb{Z}/4\mathbb{Z})$より$\overline{a} = \overline{0}, \overline{2}$.
+  これをみたす$(\overline{a}, \overline{b})$は$6$組しかないから, これらが部分群$H$をなすはずである.
+  実際, $\langle (\overline{1}, \overline{2}) \rangle$が位数$6$の部分群である.\\
+  (2) $G = \mathbb{Z}/18\mathbb{Z}$とおく. $\abs{G} = 18$なので, 部分群の位数の候補は$1, 2, 3, 6, 9, 18$である.
+  これらのうち, $1, 18$にはそれぞれ自明な部分群$\{0\}, G$が対応する.
+  また, 中国剰余定理より$G \cong \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/9\mathbb{Z}$である.
+  以下, $G$の部分群$H$の位数が$2, 3, 4, 6$の場合を考える.\\
+  \underline{位数$2$の場合}:
+  (1) の位数$3$の場合と同様で, $\langle (\overline{1}, \overline{0}) \rangle$のみ.\\
+  \underline{位数$3$の場合}:
+  (1) の位数$2$の場合と同様で, $\langle (\overline{0}, \overline{3}) \rangle$のみ.\\
+  \underline{位数$6$の場合}:
+  (1) の位数$6$の場合と同様で, $\langle (\overline{1}, \overline{3}) \rangle$のみ.\\
+  \underline{位数$9$の場合}:
+  (1) の位数$4$の場合と同様で, $\langle (\overline{0}, \overline{1}) \rangle$のみ.\\
+  以上を一般化すると, $p, q$を素数として$\mathbb{Z}/p^2q\mathbb{Z}$の部分群を求める問題となる. (追記するかも.)
+\end{ans}
+
 \end{document}
