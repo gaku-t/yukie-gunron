@@ -28,6 +28,7 @@
 \newcommand{\transpose}[1]{{\prescript{t}{}{#1}}}
 \newcommand{\Sp}[1]{\mathrm{Sp}(#1)}
 \newcommand{\U}[1]{\mathrm{U}(#1)}
+\newcommand{\Z}[1]{\mathbb{Z}/#1\mathbb{Z}}
 
 \DeclarePairedDelimiter{\gen}{\langle}{\rangle}
 \DeclarePairedDelimiter{\order}{\lvert}{\rvert}
@@ -401,7 +402,7 @@
 
 \begin{ans}
   (1) $\mathfrak{S}_3$は可換群ではないから巡回群ではない.
-  (別解: $\mathfrak{S}_3$には位数$2$の元が$3$つあるが, 巡回群$\mathbb{Z}/6\mathbb{Z}$には$1$つしかないから, 両者は一致しない.) \\
+  (別解: $\mathfrak{S}_3$には位数$2$の元が$3$つあるが, 巡回群$\Z{6}$には$1$つしかないから, 両者は一致しない.) \\
   (2) $\mathbb{Q}$が巡回群であると仮定して, 生成元が$r \neq 0$であるとする.
   このとき, $\mathbb{Q}$の任意の元は$nr\ (n \in \mathbb{Z})$という形で表せるはずだが, $\frac{r}{2} \in \mathbb{Q}$はそうではないので矛盾. \\
   (3) $\mathbb{Q}$の場合と同様. (別解: 巡回群の濃度はたかだか可算だが, $\mathbb{R}$の濃度は非可算なので一致しない.) \\
@@ -483,7 +484,7 @@
   位数$d$の群$G$を生成する元の位数は$d$である.
   前問より$\overline{n}$の位数は$d/\gcd(d, n)$であるから,
   $d$と互いに素であるような$n$についての$\overline{n}$を挙げればよい.
-  たとえば$\mathbb{Z}/15\mathbb{Z}$では
+  たとえば$\Z{15}$では
   $\overline{1}, \overline{2}, \overline{4}, \overline{7}, \overline{8}, \overline{11}, \overline{13}, \overline{14}$.
   他も同様.
 \end{ans}
@@ -579,8 +580,8 @@
 \end{ans}
 
 \begin{ans}
-  $\mathbb{Z}/4\mathbb{Z}$には位数$4$の元があるが,
-  $\mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$にはないので,
+  $\Z{4}$には位数$4$の元があるが,
+  $\Z{2} \times \Z{2}$にはないので,
   これらは同型ではない.
 \end{ans}
 
@@ -673,7 +674,7 @@
 \end{ans}
 
 \begin{ans}
-  $G = \mathbb{Z}/15\mathbb{Z}$の場合のみを考える. (他も同様である.)
+  $G = \Z{15}$の場合のみを考える. (他も同様である.)
   自己準同型$\phi: G \rightarrow G$は,
   $1$つの生成元での値$\phi(\overline{1})$を与えれば一意に定まる.
   そうして定めた$\phi$が同型であるための必要十分条件は, $\phi(\overline{1})$がまた$G$の生成元であることである.
@@ -683,14 +684,14 @@
   また, $\overline{1} \mapsto \overline{k}$なる自己同型は$x \mapsto \overline{k}x$と書けるので,
   明らかに$\mathrm{Aut}(G)$はアーベル群である.
   有限アーベル群の基本定理 (定理4.8.1) より,
-  $\mathrm{Aut}(G) \cong \mathbb{Z}/8\mathbb{Z}$
+  $\mathrm{Aut}(G) \cong \Z{8}$
   または
-  $\mathrm{Aut}(G) \cong \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/4\mathbb{Z}$
+  $\mathrm{Aut}(G) \cong \Z{2} \times \Z{4}$
   または
-  $\mathrm{Aut}(G) \cong \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$
+  $\mathrm{Aut}(G) \cong \Z{2} \times \Z{2} \times \Z{2}$
   であるが, $\mathrm{Aut}(G)$に単一の生成元がないこと,
   および$\overline{1} \mapsto \overline{2}$なる自己同型の位数が$4$であることが計算により確かめられるので,
-  $\mathrm{Aut}(G) \cong \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/4\mathbb{Z}$.
+  $\mathrm{Aut}(G) \cong \Z{2} \times \Z{4}$.
 \end{ans}
 
 \begin{ans}
@@ -1016,8 +1017,8 @@
   一般に, $G$の指数$p$の部分群の数を求める.
   $H$を$G$の指数$p$の部分群とすると, 前問より$H$は$pG$を含む.
   そこで, 例題2.10.12と同様に, $H$は$G/pG$の指数$p$の部分群と1対1に対応する.
-  $G/pG \cong \mathbb{Z}/p\mathbb{Z} \times \mathbb{Z}/p\mathbb{Z}$であるから,
-  $\mathbb{Z}/p\mathbb{Z} \times \mathbb{Z}/p\mathbb{Z}$の指数$p$の, すなわち位数$p$の部分群の数を求めればよい.
+  $G/pG \cong \Z{p} \times \Z{p}$であるから,
+  $\Z{p} \times \Z{p}$の指数$p$の, すなわち位数$p$の部分群の数を求めればよい.
   この部分群は巡回部分群であり, $\langle(x, y)\rangle$ と書ける.
   $x = \overline{0}$であるようなものは, $\langle(\overline{0}, \overline{1})\rangle$のみである.
   $x \neq \overline{0}$の場合は, $x = \overline{1}$と仮定しても一般性を失わない.
@@ -1028,41 +1029,41 @@
 
 \begin{ans}
   中国剰余定理より
-  $G \cong \mathbb{Z}/45\mathbb{Z} \times \mathbb{Z}/3\mathbb{Z} \times \mathbb{Z}/8\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/7\mathbb{Z}$
-  である. $\mathbb{Z}/45\mathbb{Z}$, $\mathbb{Z}/3\mathbb{Z}$, $\mathbb{Z}/7\mathbb{Z}$において$2$倍写像は全単射なので,
-  $G/2G \cong \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$である.
+  $G \cong \Z{45} \times \Z{3} \times \Z{8} \times \Z{2} \times \Z{7}$
+  である. $\Z{45}$, $\Z{3}$, $\Z{7}$において$2$倍写像は全単射なので,
+  $G/2G \cong \Z{2} \times \Z{2}$である.
   したがって例題2.10.12と同様にして, $G$の指数$2$の部分群の個数は$3$である.
 \end{ans}
 
 \begin{ans}
-  (1) $G = \mathbb{Z}/12\mathbb{Z}$とおく. $\abs{G} = 12$なので, 部分群の位数の候補は$1, 2, 3, 4, 6, 12$である.
+  (1) $G = \Z{12}$とおく. $\abs{G} = 12$なので, 部分群の位数の候補は$1, 2, 3, 4, 6, 12$である.
   これらのうち, $1, 12$にはそれぞれ自明な部分群$\{0\}, G$が対応する.
-  また, 中国剰余定理より$G \cong \mathbb{Z}/3\mathbb{Z} \times \mathbb{Z}/4\mathbb{Z}$である.
+  また, 中国剰余定理より$G \cong \Z{3} \times \Z{4}$である.
   以下, $G$の部分群$H$の位数が$2, 3, 4, 6$の場合を考える.\\
   \underline{位数$2$の場合}:
-  $H$は巡回群で, ある元$(\overline{a}, \overline{b}) \in \mathbb{Z}/3\mathbb{Z} \times \mathbb{Z}/4\mathbb{Z}$で生成される.
-  $2\overline{a} = \overline{0}\ (\in \mathbb{Z}/3\mathbb{Z})$より$\overline{a} = \overline{0}$.
-  よって$\overline{b} \in \mathbb{Z}/4\mathbb{Z}$の位数が$2$なので,
+  $H$は巡回群で, ある元$(\overline{a}, \overline{b}) \in \Z{3} \times \Z{4}$で生成される.
+  $2\overline{a} = \overline{0}\ (\in \Z{3})$より$\overline{a} = \overline{0}$.
+  よって$\overline{b} \in \Z{4}$の位数が$2$なので,
   $(\overline{a}, \overline{b}) = (\overline{0}, \overline{2})$.
   逆に, $\langle (\overline{0}, \overline{2}) \rangle$は位数$2$の部分群なので,
   これが位数$2$の唯一の部分群である.\\
   \underline{位数$3$の場合}:
-  $H$は巡回群で, ある元$(\overline{a}, \overline{b}) \in \mathbb{Z}/3\mathbb{Z} \times \mathbb{Z}/4\mathbb{Z}$で生成される.
-  $3\overline{b} = \overline{0}\ (\in \mathbb{Z}/4\mathbb{Z})$より$\overline{b} = \overline{0}$.
-  よって$H$は$\mathbb{Z}/3\mathbb{Z}$の部分群と同型であるが, 位数の比較により, $\mathbb{Z}/3\mathbb{Z}$自体と同型である.
+  $H$は巡回群で, ある元$(\overline{a}, \overline{b}) \in \Z{3} \times \Z{4}$で生成される.
+  $3\overline{b} = \overline{0}\ (\in \Z{4})$より$\overline{b} = \overline{0}$.
+  よって$H$は$\Z{3}$の部分群と同型であるが, 位数の比較により, $\Z{3}$自体と同型である.
   すなわち位数$3$の部分群は$\langle (\overline{1}, \overline{0}) \rangle$のみである.\\
   \underline{位数$4$の場合}:
   $(\overline{a}, \overline{b}) \in H$とすると,
-  $4\overline{a} = \overline{0}\ (\in \mathbb{Z}/3\mathbb{Z})$より$\overline{a} = 0$.
+  $4\overline{a} = \overline{0}\ (\in \Z{3})$より$\overline{a} = 0$.
   あとは位数$3$の場合と同様の議論により, 位数$4$の部分群は$\langle (\overline{0}, \overline{1}) \rangle$のみである.\\
   \underline{位数$6$の場合}:
   $(\overline{a}, \overline{b}) \in H$とすると,
-  $6\overline{b} = \overline{0}\ (\in \mathbb{Z}/4\mathbb{Z})$より$\overline{a} = \overline{0}, \overline{2}$.
+  $6\overline{b} = \overline{0}\ (\in \Z{4})$より$\overline{a} = \overline{0}, \overline{2}$.
   これをみたす$(\overline{a}, \overline{b})$は$6$組しかないから, これらが部分群$H$をなすはずである.
   実際, $\langle (\overline{1}, \overline{2}) \rangle$が位数$6$の部分群である.\\
-  (2) $G = \mathbb{Z}/18\mathbb{Z}$とおく. $\abs{G} = 18$なので, 部分群の位数の候補は$1, 2, 3, 6, 9, 18$である.
+  (2) $G = \Z{18}$とおく. $\abs{G} = 18$なので, 部分群の位数の候補は$1, 2, 3, 6, 9, 18$である.
   これらのうち, $1, 18$にはそれぞれ自明な部分群$\{0\}, G$が対応する.
-  また, 中国剰余定理より$G \cong \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/9\mathbb{Z}$である.
+  また, 中国剰余定理より$G \cong \Z{2} \times \Z{9}$である.
   以下, $G$の部分群$H$の位数が$2, 3, 4, 6$の場合を考える.\\
   \underline{位数$2$の場合}:
   (1) の位数$3$の場合と同様で, $\langle (\overline{1}, \overline{0}) \rangle$のみ.\\
@@ -1072,7 +1073,36 @@
   (1) の位数$6$の場合と同様で, $\langle (\overline{1}, \overline{3}) \rangle$のみ.\\
   \underline{位数$9$の場合}:
   (1) の位数$4$の場合と同様で, $\langle (\overline{0}, \overline{1}) \rangle$のみ.\\
-  以上を一般化すると, $p, q$を素数として$\mathbb{Z}/p^2q\mathbb{Z}$の部分群を求める問題となる. (追記するかも.)
+  以上を一般化すると, $p, q$を素数として$\Z{p^2q}$の部分群を求める問題となる. (追記するかも.)
+\end{ans}
+
+\begin{ans}
+  (1) $G$の元の位数の候補は$1, 2, 3, 6$である.
+  もし位数$6$の元が存在すれば$G$は巡回群$\Z{6}$に同型であり,
+  $\overline{2}$ (に同型で対応する元) が位数$3$である.
+  そこで位数$6$の元が存在しない場合を考える.
+  この場合に位数$3$の元が存在することを背理法で示そう.
+  もし位数$3$の元が存在しなければ, 単位元以外の元はすべて位数$2$なので,
+  演習問題2.4.8より$G$は可換である. よって$x$を単位元以外の元とすると
+  $H = \langle x \rangle$は$G$の位数$2$の正規部分群であり, $G/H$は位数$3$の巡回群である.
+  そこで$G/H$の生成元である剰余類の代表元を$g$とすると,
+  $gHgH \neq H$より$(g)^2 \notin H$であるが,
+  このことから$g$の位数が$3$以上であることになり, 矛盾.
+  よって$G$に位数$6$の元が存在しない場合にも, 位数$3$の元が存在することが分かった.\\
+  (2) $G$にもし位数$6$の元が存在すれば, (1) と同様に, $\overline{3}$が位数$2$である.
+  そこで位数$6$の元が存在しない場合を考える.
+  演習問題2.8.2より, $H$は$G$の正規部分群であることに注意する.
+  位数$2$の巡回群$G/H$の生成元である剰余類の代表元を$g$とすると,
+  $gHgHgH \neq H$より$g^3 \notin H$であるが,
+  このことから$g$の位数は$3$ではない. $gH$が$G/H$の生成元なので, $g$の位数は$1$でもない.
+  したがって$g$の位数は$2$である.\\
+  (3) $x$を$G$の位数$3$の元, $y$を位数$2$の元とする.
+  $H = \langle x \rangle$は (2) で見たように正規部分群であるが,
+  $G$が可換なら$K = \langle y \rangle$も正規部分群である.
+  また, 各元の位数を比較することにより$H \cap K = 1_G$である.
+  $h_1, h_2 \in H$, $k_1, k_2 \in K$について, もし$h_1k_1 = h_2k_2$ならば$h_2^{-1}h_1 = k_2k_1^{-1} = 1_G$より
+  $h_1 = h_2$かつ$k_1 = k_2$である. したがって$\abs{HK} = \abs{H}\abs{K} = 6$なので$HK = G$.
+  命題2.9.2より$G \cong H \times K \cong \Z{3} \times \Z{2} \cong \Z{6}$.
 \end{ans}
 
 \end{document}
