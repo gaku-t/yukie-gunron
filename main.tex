@@ -29,6 +29,7 @@
 \newcommand{\Sp}[1]{\mathrm{Sp}(#1)}
 \newcommand{\U}[1]{\mathrm{U}(#1)}
 \newcommand{\Z}[1]{\mathbb{Z}/#1\mathbb{Z}}
+\newcommand{\Ad}[1]{\mathrm{Ad}(#1)}
 
 \DeclarePairedDelimiter{\gen}{\langle}{\rangle}
 \DeclarePairedDelimiter{\order}{\lvert}{\rvert}
@@ -1162,6 +1163,18 @@
     &(1\ 3\ 2)x_3 = (1\ 2\ 3)
   \end{align*}
   となるので$\rho((1\ 3\ 2)) = (1\ 3\ 2)$.
+\end{ans}
+
+\begin{ans}
+  \begin{align*}
+    &\Ad{(1\ 2\ 3)}(1) = 1\\
+    &\Ad{(1\ 2\ 3)}((1\ 2)) = (1\ 2\ 3)(1\ 2)(1\ 3\ 2) = (2\ 3)\\
+    &\Ad{(1\ 2\ 3)}((1\ 3)) = (1\ 2\ 3)(1\ 3)(1\ 3\ 2) = (1\ 2)\\
+    &\Ad{(1\ 2\ 3)}((2\ 3)) = (1\ 2\ 3)(2\ 3)(1\ 3\ 2) = (1\ 3)\\
+    &\Ad{(1\ 2\ 3)}((1\ 2\ 3)) = (1\ 2\ 3)
+    &\Ad{(1\ 2\ 3)}((1\ 3\ 2)) = (1\ 3\ 2)
+  \end{align*}
+  となるので$\rho((1\ 2\ 3)) = (2\ 4\ 3)$.
 \end{ans}
 
 \end{document}
