@@ -28,6 +28,7 @@
 \newcommand{\transpose}[1]{{\prescript{t}{}{#1}}}
 \newcommand{\Sp}[1]{\mathrm{Sp}(#1)}
 \newcommand{\U}[1]{\mathrm{U}(#1)}
+\newcommand{\SO}[1]{\mathrm{SO}(#1)}
 \newcommand{\Z}[1]{\mathbb{Z}/#1\mathbb{Z}}
 \newcommand{\Ad}[1]{\mathrm{Ad}(#1)}
 
@@ -1231,6 +1232,20 @@
   となるので, $\Ad{y}$の$\langle x \rangle$への作用は置換
   $\sigma = (1\ 5\ 4\ 6\ 2\ 3)$で表される. (ただしここでは$x^i = i$と考えている.)
   $\sigma^{1000}(1) = \sigma^{6 \cdot 166 + 4}(1) = \sigma^{4}(1) = 2$なので, $y^{1000}xy^{-1000} = x^2$.\\
+\end{ans}
+
+\begin{ans}
+  $G$のある元$g$について
+  $g\frac{\bm{x}}{\norm{\bm{x}}} = \frac{\bm{y}}{\norm{\bm{y}}}$
+  ならば
+  $g\bm{x} = \bm{y}$
+  なので, はじめから$\norm{\bm{x}} = \norm{\bm{y}} = 1$であるとして一般性を失わない.
+  また$\bm{x} = [1, 0,..., 0]$に対して$g_1\bm{x} = \bm{y}$かつ$g_2\bm{x} = \bm{y}^\prime$ならば$g_2g_1^{-1}\bm{y} = \bm{y}^\prime$なので,
+  $\bm{x} = [1, 0,..., 0]$の場合を示せばよい.
+  $\bm{y_1} = \bm{y}$とし, $\bm{y_2},..., \bm{y_n}$を, Gram-Schmidtの直交化により
+  $\{\bm{y_1},.., \bm{y_n}\}$が$V$の正規直交基底であるものとしてとる.
+  さらに$\bm{y_2}$の符号を必要ならば入れ替えることにして
+  $g = (\bm{y_1},..., \bm{y_n})$と定めると, $g \in \SO{n}$かつ$g\bm{x} = \bm{y_1} = \bm{y}$である.
 \end{ans}
 
 \end{document}
