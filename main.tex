@@ -1248,4 +1248,19 @@
   $g = (\bm{y_1},..., \bm{y_n})$と定めると, $g \in \SO{n}$かつ$g\bm{x} = \bm{y_1} = \bm{y}$である.
 \end{ans}
 
+\begin{ans}
+  (1) $\sigma((2, 4)) = (\sigma(2), \sigma(4)) = (1, 4)$.\\
+  (2) 任意の$\sigma \in G$に対して$\sigma((1, 1)) = (\sigma(1), \sigma(1))$なので,
+  $(1, 1)$の軌道は$(i, i)$の形をしている. 逆に任意の$i \in X$に対して$\sigma = (1\ i)$と定めれば
+  $\sigma((1, 1)) = (i, i)$なので, $(1, 1)$の軌道は$\{(i, i) \mid i \in X\}$である.
+  他の軌道として$(1, 2)$の軌道を考えると, 任意の$\sigma \in G$に対して$\sigma(1) \neq \sigma(2)$なので,
+  $(1, 2)$の軌道は$(i, j)$ ($i \neq j$) の形をしている. 逆に$i, j \in X, i \neq j$に対して適当に$\sigma \in G$を定めて
+  $\sigma(1) = i$, $\sigma(2) = j$となるようにできて,$\sigma((1, 2)) = (i, j)$となるので,
+  $(1, 2)$の軌道は$\{(i, j) \mid i, j \in X, i \neq j\}$である.
+  以上の$2$つの軌道で$Y$の元は尽くされるので, これらが$Y$における$G$の軌道の全てである.\\
+  (3) $\sigma((1, 1)) = (1, 1) \Longleftrightarrow \sigma(1) = 1$なので, $(1, 1)$の安定化群は$\mathfrak{S}_{n-1}$.
+  また$\sigma((1, 2)) = (1, 2) \Longleftrightarrow \sigma(1) = 1 \land \sigma(2) = 2$なので, $(1, 2)$の安定化群は$\mathfrak{S}_{n-2}$.
+  ($n = 2$のとき$\mathfrak{S}_0 = \{1\}$である.)
+\end{ans}
+
 \end{document}
