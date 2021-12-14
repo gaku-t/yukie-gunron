@@ -1263,4 +1263,22 @@
   ($n = 2$のとき$\mathfrak{S}_0 = \{1\}$である.)
 \end{ans}
 
+\begin{ans}
+  (1) $g\bm{x} = \bm{x}$なる$g \in G$は, $[1, 0]$を$[1, 0]$に, $[0, 1]$を$[1, 0]$と線形独立なベクトルに移す行列であるから,
+  $G_{\bm{x}} = \biggl\{\begin{pmatrix*}
+    1 & a_{12}\\
+    0 & a_{22}
+  \end{pmatrix*} \biggm\vert a_{22} \neq 0\biggr\}$.\\
+  (2) 任意の$g \in G$に対して$g\bm{x} \neq [0, 0]$なので,
+  $[0, 0]$は$g$の軌道に属さない.
+  逆に, $[a_{11}, a_{21}] \neq [0, 0]$ならば
+  $g = \begin{pmatrix*}
+    a_{11} & -a_{21}\\
+    a_{21} & a_{11}
+  \end{pmatrix*}$とすると
+  $g \in G$で$g\bm{x} = [a_{11}, a_{21}]$なので,
+  $[0, 0]$以外の点はすべて$\bm{x}$の軌道に属する.
+  したがって$G \cdot \bm{x} = \{y \mid y \in \mathbb{R}^2\setminus[0, 0]\}$.
+\end{ans}
+
 \end{document}
