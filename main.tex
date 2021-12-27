@@ -1357,4 +1357,49 @@
   したがって$g \in Z_G(g_2)$なので$Z_G(g_1) \subset Z_G(g_2)$. 逆も同様に成り立つので$Z_G(g_1) = Z_G(g_2)$である.
 \end{ans}
 
+\begin{ans}
+  (1)
+  \begin{align*}
+    \begin{pmatrix*}
+      a & b \\
+      c & d
+    \end{pmatrix*} A = \begin{pmatrix*}
+      2a & b \\
+      2c & d
+    \end{pmatrix*},\ A \begin{pmatrix*}
+      a & b \\
+      c & d
+    \end{pmatrix*} = \begin{pmatrix*}
+      2a & 2b \\
+      c & d
+    \end{pmatrix*}
+  \end{align*}
+  であるから, 両者が等しいことは$b = 0$かつ$c = 0$であることと同値である.
+  よって$A$の中心化群は$\biggl\{\begin{pmatrix*}
+    a & 0 \\
+    0 & d \\
+  \end{pmatrix*} \biggm\vert a, d \neq 0 \biggr\}$である.\\
+  (2)
+  \begin{align*}
+    \begin{pmatrix*}
+      a & b \\
+      c & d
+    \end{pmatrix*} A = \begin{pmatrix*}
+      2a & a + 2b \\
+      2c & c + 2d
+    \end{pmatrix*},\ A \begin{pmatrix*}
+      a & b \\
+      c & d
+    \end{pmatrix*} = \begin{pmatrix*}
+      2a + c & 2b + d \\
+      2c & 2d
+    \end{pmatrix*}
+  \end{align*}
+  であるから, 両者が等しいことは$c = 0$かつ$a = d$であることと同値である.
+  よって$A$の中心化群は$\biggl\{\begin{pmatrix*}
+    a & b \\
+    0 & a \\
+  \end{pmatrix*} \biggm\vert a \neq 0 \biggr\}$である.
+\end{ans}
+
 \end{document}
