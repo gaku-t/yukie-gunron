@@ -38,6 +38,8 @@
 
 \begin{document}
 
+\noindent(第1版第11刷をもとにしている.)
+
 \fakesection{第1章 集合論}
 \fakesubsection{1.1 集合と論理の復習}
 
@@ -1400,6 +1402,59 @@
     a & b \\
     0 & a \\
   \end{pmatrix*} \biggm\vert a \neq 0 \biggr\}$である.
+\end{ans}
+
+\begin{ans}
+  (1) 問題文に書いていないが$g \in G$とする.
+  $c \neq 0$ならば$\mathrm{Im}(cz + d) \neq 0$より$cz + d \neq 0$である.
+  $c = 0$ならば$g \in \mathrm{SL}_2(\mathbb{R})$より$d \neq 0$であるのでやはり$cz + d \neq 0$.
+  また,
+  \begin{align*}
+    \frac{az + b}{cz + d}
+    = \frac{(az + b)(c\bar{z} + d)}{(cz + d)(c\bar{z} + d)}
+    = \frac{ac\abs{z}^2 + bd + adz + bc\bar{z}}{\abs{cz + d}^2}
+  \end{align*}
+  より, $\mathrm{Im}(gz) = \frac{\mathrm{Im}(z)(ad - bc)}{\abs{cz + d}^2} > 0$.
+  よって$gz \in \mathbb{H}$.\\
+  (2) $g = 1_G = \begin{pmatrix*}
+    1 & 0 \\
+    0 & 1
+  \end{pmatrix*}$ならば$gz = z$.\\
+  また, $G$の任意の$2$つの元を$g = \begin{pmatrix*}
+    a & b \\
+    c & d
+  \end{pmatrix*}$, $h = \begin{pmatrix*}
+    k & l \\
+    m & n
+  \end{pmatrix*}$とおくと,
+  \begin{align*}
+    g(hz) &= g\biggl(\frac{kz + l}{mz + n}\biggr)
+    = \frac{a(kz + l) + b(mz + n)}{c(kz + l) + d(mz + n)}
+    = \frac{(ak + bm)z + (al + bn)}{(ck + dm)z + (cl + dn)}\\
+    (gh)z &= \begin{pmatrix*}
+      ak + bm & al + bn \\
+      ck + dm & cl + dn
+    \end{pmatrix*}z = \frac{(ak + bm)z + (al + bn)}{(ck + dm)z + (cl + dn)}
+  \end{align*}
+  よって$g(hz) = (gh)z$.\\
+  (3) $\mathbb{H}$の任意の元$x + yi$ ($y > 0$)に対して,
+  $g = \begin{pmatrix*}
+    \sqrt{y} & \frac{x}{\sqrt{y}} \\
+    0 & \frac{1}{\sqrt{y}}
+  \end{pmatrix*}$と定めると, $g \in G$であり,
+  $gi = \frac{\sqrt{y} \sqrt{-1} + \frac{x}{\sqrt{y}}}{\frac{1}{\sqrt{y}}} = x + y\sqrt{-1}$.
+  よって$G \cdot \sqrt{-1} = \mathbb{H}$.\\
+  (4) $g \sqrt{-1} = \sqrt{-1}
+  \Leftrightarrow \frac{a\sqrt{-1} + b}{c\sqrt{-1} + d} = \sqrt{-1}
+  \Leftrightarrow (a - d)\sqrt{-1} + (b + c) = 0
+  \Leftrightarrow g = \begin{pmatrix*}
+    a & b \\
+    -b & a
+  \end{pmatrix*}$.
+  また$\det g = 1$より, 安定化群は$\biggl\{\begin{pmatrix*}
+    \cos\theta & \sin\theta \\
+    -\sin\theta & \cos\theta
+  \end{pmatrix*} \biggm\vert \theta \in [0, 2\pi) \biggr\}$.
 \end{ans}
 
 \end{document}
