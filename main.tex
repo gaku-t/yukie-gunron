@@ -1457,4 +1457,26 @@
   \end{pmatrix*} \biggm\vert \theta \in [0, 2\pi) \biggr\}$.
 \end{ans}
 
+\begin{ans}
+  (1) $(\rho(1_G)f)(h) = f(1_Gh) = f(h)$より, $\rho(1_G)f = f$.
+  また, $(\rho(g_1g_2)f)(h) = f(g_1g_2h) = (\rho(g_1)f)(g_2h) = (\rho(g_2)(\rho(g_1)f))(h)$
+  より, $\rho$は右作用である.\\
+  (2) $(\rho(1_G)f)(h) = f(h1_G^{-1}) = f(h)$より, $\rho(1_G)f = f$.
+  また, $(\rho(g_1g_2)f)(h) = f(hg_2^{-1}g_1^{-1}) = (\rho(g_1)f)(hg_2^{-1}) = (\rho(g_2)(\rho(g_1)f))(h)$
+  より, $\rho$は右作用である.\\
+  (3) $(\rho(1_G)f)(h) = f(1_G^{-1}h1_G) = f(h)$より, $\rho(1_G)f = f$.
+  また, $(\rho(g_1g_2)f)(h) = f(g_2^{-1}g_1^{-1}hg_1g_2) = (\rho(g_2)f)(g_1^{-1}hg_1) = (\rho(g_1)(\rho(g_2)f))(h)$
+  より, $\rho$は左作用である.\\
+  (補足) 一般に, 左作用$\phi: G \times X \rightarrow X$があるとき,
+  $\psi: G \times X \rightarrow X$を$\psi(g, x) = \phi(g^{-1}, x)$と定めると,
+  \begin{align*}
+    \psi(1_G, x) &= \phi(1_G, x) \\
+    &= x \\
+    \psi(g, \psi(h, x)) &= \phi(g^{-1}, \phi(h^{-1}, x)) \\
+    &= \phi(g^{-1}h^{-1}, x) \\
+    &= \psi(hg, x)
+  \end{align*}
+  より, $\psi$は右作用である. 左右を逆にしても同様のことが言える.
+\end{ans}
+
 \end{document}
