@@ -302,17 +302,21 @@
   (2) $-3 \equiv 4 \pmod{7}$より, $\overline{4}$.
   (3) $20 \equiv 6 \pmod{7}$より, $\overline{6}$.
   (4) $125 \equiv 6 \pmod{7}$より, $\overline{6}$.
-  (5) $4^{32} \equiv 4^{30} \cdot 4^2 \equiv 64^{10} \cdot 16 \equiv 1^{10} \cdot 16 \equiv 2 \pmod{7}$より, $\overline{2}$.
+  (5) $4^3 \equiv 64 \equiv 1 \pmod{7}$より, $4^{32} \equiv 4^2 \equiv 2 \pmod{7}$であるから, $\overline{2}$.
 \end{ans}
 
 \begin{ans}
-  (1) $34 \cdot 21 \equiv (-5) \cdot 21 \equiv -105 \equiv 12 \pmod{39}$,
-  $12 \cdot 33 \equiv 12 \cdot (-6) \equiv -72 \equiv 6 \pmod{39}$より, $\overline{6}$
-  (2) $18 \cdot 13 = 6 \cdot 39 \equiv 0 \pmod{39}$より, $\overline{0}$.
-  (3) $16^2 \equiv 256 \equiv 22 \pmod{39}$, $16^4 = 22^2 \equiv 16 \pmod{39}$,
-  $16^8 \equiv 16^2 \equiv 22 \pmod{39}$より, $\overline{22}$.
-  (4) (3) に続けて$16^{16} \equiv 22^2 \equiv 16 \pmod{39}$, $16^{32} \equiv 16^2 \equiv 22 \pmod{39}$より,
-  $16^{34} = 16^2 \cdot 16^{32} \equiv 22 \cdot 22 \equiv 16 \pmod{39}$. よって$\overline{16}$.
+  (1) $34 \cdot 21 \cdot 11 \equiv 8 \cdot 8 \cdot 11 \equiv 64 \cdot 11 \equiv 12 \cdot 11 \equiv 132 \equiv 2 \pmod{13}$
+  より, $34 \cdot 21 \cdot 33 \equiv 2 \cdot 3 \equiv 6 \pmod{39}$. よって$\overline{6}$.\\
+  (2) $18 \cdot 13 = 6 \cdot 39 \equiv 0 \pmod{39}$より, $\overline{0}$.\\
+  (3) $16^8 \equiv (13 + 3)^8 \equiv 13^8 + 3^8 \pmod{39}$であるが,
+  $13^2 \equiv 13 \pmod{39}$, $3^4 \equiv 3 \pmod{39}$であるから,
+  $13^8 + 3^8 \equiv 13 + 3^2 \equiv 22$.
+  よって$\overline{22}$.\\
+  (4) (3) と同様にして,
+  $16^{34} \equiv 13^{34} + 3^{34} \equiv 13 + 3^{10} \equiv 13 + 3^4 \equiv 13 + 3 \equiv 16$.
+  (冪を$4$で割った商と余りを足していく.)
+  よって$\overline{16}$.\\
 \end{ans}
 
 \fakesubsection{2.3 部分群と生成元}
