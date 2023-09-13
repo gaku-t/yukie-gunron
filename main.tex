@@ -1671,4 +1671,28 @@
   したがって準同型定理により, 求めるべき同型が得られる.
 \end{ans}
 
+\begin{ans}
+  (1) $i_1,..., i_l$がすべて異なる数ならば, $\tau \in Z_{\mathfrak{S}_n}(\sigma)$は
+  $\sigma$を構成する巡回置換それぞれについて, 数字の列をシフトするものである.
+  このシフトは列と同じ長さの巡回置換の累乗であり, 長さが奇数の巡回置換は偶置換であることから, $\tau$は偶置換である.
+  したがって$Z_{\mathfrak{S}_n}(\sigma) \subset Z_{A_n}(\sigma)$. 逆の包含関係は自明である.
+  またこのとき, $\sigma$の奇置換による共役は, $(1\ 2)\sigma(1\ 2)$の偶置換による共役に他ならない.
+  したがって, $\sigma$の$\mathfrak{S}_n$における共役類は, $A_n$における2つの共役類$C(\sigma)$と$C((1\ 2)\sigma(1\ 2))$の和である.
+  この2つの共役類の元の個数が等しいことは,
+  $\abs{\mathfrak{S}_n}/\abs{Z_{\mathfrak{S}_n}(\sigma)} = 2\abs{A_n}/\abs{Z_{A_n}(\sigma)}$
+  と命題4.1.23から分かる.\\
+  (2) このとき$i_1,\cdots, i_l$について「偶数が1つある」か「同じ奇数がある」のいずれかが成り立つが,
+  いずれの場合も, 奇置換$\tau_0$を$\tau_0\sigma\tau_0^{-1} = \sigma$が成り立つようにとることができる.
+  (前者の場合は偶数長の巡回のシフト, 後者の場合は同じ奇数長の巡回を交換するものを考えればよい.)
+  このとき, $\tau\sigma\tau^{-1} = \sigma \Longleftrightarrow \tau\tau_0\sigma\tau_0^{-1}\tau^{-1} = \sigma$
+  より, $\tau \in Z_{A_n}(\sigma) \Longleftrightarrow \tau\tau_0 \in Z_{\mathfrak{S}_n}(\sigma) \setminus Z_{A_n}(\sigma)$.
+  したがって, $Z_{\mathfrak{S}_n}(\sigma) = Z_{A_n}(\sigma) \cup Z_{A_n}(\sigma)\tau_0$.
+  共役類が等しいことも, $\tau_0$の存在から分かる.
+\end{ans}
+
+\begin{ans}
+  $\rho((1\ 2)) = (2\ 3)$, $\rho((2\ 3)) = (1\ 2)$であることがただちに見て取れる.
+  これらの像は$\mathfrak{S}_3$を生成するので, $\rho$は全射. よって同型.
+\end{ans}
+
 \end{document}
