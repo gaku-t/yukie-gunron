@@ -31,6 +31,7 @@
 \newcommand{\SO}[1]{\mathrm{SO}(#1)}
 \newcommand{\Z}[1]{\mathbb{Z}/#1\mathbb{Z}}
 \newcommand{\Ad}[1]{\mathrm{Ad}(#1)}
+\newcommand{\Ker}[1]{\mathrm{Ker}(#1)}
 
 \DeclarePairedDelimiter{\gen}{\langle}{\rangle}
 \DeclarePairedDelimiter{\order}{\lvert}{\rvert}
@@ -714,8 +715,8 @@
   $\mathrm{Aut}(G)$の元は$(1\ 2), (2\ 3)$の行き先を定めることで決定できる.
   これらは位数$2$の元なので, 同型写像による行き先は同じく位数$2$の異なる元でなければならず, 候補は$3$つある.
   したがって, $\mathrm{Aut}(G)$の位数はたかだか${}_3 \mathrm{P}_2 = 6$である.
-  $G$の位数も$6$なので, $\phi$が単射 ($\mathrm{Ker}(\phi) = \{1\}$) であることを確かめれば, $\phi$が同型であることが分かる.
-  $\sigma \in \mathrm{Ker}(\phi)$ならば, 任意の$\tau \in G$に対して
+  $G$の位数も$6$なので, $\phi$が単射 ($\Ker{\phi} = \{1\}$) であることを確かめれば, $\phi$が同型であることが分かる.
+  $\sigma \in \Ker{\phi}$ならば, 任意の$\tau \in G$に対して
   $\sigma \tau \sigma^{-1} = \tau$, すなわち$\sigma$と$\tau$は可換である.
   互換$(1\ 2)$と可換な元は$1$と$(1\ 2)$のみであることが計算で確かめられ,
   また$(1\ 3)$についても同様なので, $G$のすべての元と可換であるのは$1$のみである.
@@ -991,17 +992,17 @@
 
 \begin{ans}
   $\phi: G \rightarrow H_2$を$\phi(re^{i\theta}) = r$と定義すると
-  $\phi$は全射準同型であり, $\mathrm{Ker}\phi = H_1$である.
+  $\phi$は全射準同型であり, $\Ker{\phi} = H_1$である.
   したがって準同型定理より$G/H_1 \cong H_2$.
   また$\psi: G \rightarrow H_1$を$\psi(re^{i\theta}) = e^{i\theta}$と定義すると
-  $\psi$は全射準同型であり, $\mathrm{Ker}\psi = H_2$である.
+  $\psi$は全射準同型であり, $\Ker{\psi} = H_2$である.
   したがって準同型定理より$G/H_2 \cong H_1$.
 \end{ans}
 
 \begin{ans}
   $\phi: \mathbb{R} \rightarrow \mathbb{R}/a\mathbb{Z}$を
   $\phi(x) = ax + a\mathbb{Z}$と定めると, $\phi$は全射準同型で
-  $\mathrm{Ker}\phi = \mathbb{Z}$である. よって準同型定理より
+  $\Ker{\phi} = \mathbb{Z}$である. よって準同型定理より
   $\mathbb{R}/\mathbb{Z} \cong \mathbb{R}/a\mathbb{Z}$.
 \end{ans}
 
@@ -1011,7 +1012,7 @@
     a_{11} & 0 \\
     a_{21} & a_{22}
   \end{pmatrix} \mapsto \frac{a_{11}}{a_{22}}$
-  と定義すると, $\phi$は全射準同型で$\mathrm{Ker}\phi = H$であるから,
+  と定義すると, $\phi$は全射準同型で$\Ker{\phi} = H$であるから,
   準同型定理より$G/H \cong \mathbb{R}^\times$.
 \end{ans}
 
@@ -1693,6 +1694,18 @@
 \begin{ans}
   $\rho((1\ 2)) = (2\ 3)$, $\rho((2\ 3)) = (1\ 2)$であることがただちに見て取れる.
   これらの像は$\mathfrak{S}_3$を生成するので, $\rho$は全射. よって同型.
+\end{ans}
+
+\begin{ans}
+  (1) 計算するだけなので略.\\
+  (2) (1) の結果と$\rho(e) = e$を合わせると, $\rho$の像に含まれる$4$つの異なる元が得られる.
+  一方, $\rho$の像の位数は$\abs{\mathfrak{S}_3} = 6$の約数であるから, $\rho$は全射である.\\
+  (3) $\sigma \in \Ker{\rho}$について, $\sigma(1) = 1$ならば,
+  $\rho(\sigma)(1) = 1$より$\sigma(2) = 2$,
+  $\rho(\sigma)(2) = 2$より$\sigma(3) = 3$,
+  $\rho(\sigma)(3) = 3$より$\sigma(4) = 4$.
+  よって$\sigma = e$.
+  同様に$\sigma(1)$の値で場合分けすることで, $\Ker{\rho} = \{e, x_1, x_2, x_3\}$が得られる.
 \end{ans}
 
 \end{document}
