@@ -1,47 +1,43 @@
-# The Example of Compiling LaTeX File
-# In your latex repository, make .github/workflows/main.yml like below.
-# You only have to change `LATEX_FILE_NAME` as your tex file.
-
 on:
   push:
     tags:
       - "v*"
 
 jobs:
-  test_job:
+  compile_and_release:
     runs-on: ubuntu-latest
-    name: Example of compiling pdf
+    name: Compile TeX to PDF and Release
+    permissions:
+      contents: write
     steps:
-      # make pdf
-      # LATEX_FILE_NAME -> main.pdf generated
-      - name: Set up Git repository
-        uses: actions/checkout@v2
-      - name: Compile Tex File
-        id: compile_tex_file
-        uses: tsukuba-mas/platex-action@main
+      - uses: actions/checkout@v4
+
+      - name: Github Action for LaTeX
+        uses: xu-cheng/latex-action@9ae8710583a967aa7f9773ab07c8695131b732b7  # v3.0.1
         with:
-          LATEX_FILE_NAME: "main.tex"
-      # Create Release
+          root_file: main.tex
+          args: "-latex=uplatex"
+
       - name: Create Release
         id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844  # v0.1.15
         with:
-          tag_name: ${{github.ref}}
-          release_name: Release ${{ github.ref }}
           body: |
-            Compiled PDF ${{github.ref}}
+            Compiled PDF ${{ github.ref_name }}
           draft: false
           prerelease: false
-      # Upload Asset main.pdf
-      - name: Upload Release Asset
-        id: upload_release_asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./main.pdf
-          asset_name: main.pdf
-          asset_content_type: application/pdf
+          files: main.pdf
+
+      - name: Update PDF Link on README
+        run: |
+          echo setting URL: ${{ fromJSON(steps.create_release.outputs.assets)[0].browser_download_url }}
+          sed -i '/<!-- PDF_LINK_START -->/,/<!-- PDF_LINK_END -->/c\<!-- PDF_LINK_START -->\n最新版のPDFは[こちら](${{ fromJSON(steps.create_release.outputs.assets)[0].browser_download_url }})\n<!-- PDF_LINK_END -->' README.md
+
+      - name: Commit Changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git commit -m "Update PDF link on README for version ${{ github.ref_name }}"
+          git pull --rebase origin HEAD:main
+          git push origin HEAD:main

@@ -275,8 +275,5 @@ TSWLatexianTemp*
 # Makeindex log files
 *.lpz
 
-# config
-.latexmkrc
-
 # mac
 .DS_Store
