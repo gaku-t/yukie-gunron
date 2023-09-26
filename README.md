@@ -1,7 +1,7 @@
 # 赤雪江 演習問題解答
 
 <!-- PDF_LINK_START -->
-ここに最新版PDFへのリンクを自動生成する。
+最新版のPDFは[こちら](https://github.com/gaku-t/yukie-gunron/releases/download/v4.4.1.1/main.pdf)
 <!-- PDF_LINK_END -->
 過去版のPDFもReleasesにあります。
 
