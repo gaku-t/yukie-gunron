@@ -39,4 +39,4 @@ jobs:
           git add README.md
           git commit -m "[Automated] Update PDF link on README for version ${{ github.ref_name }}"
           git pull --rebase origin main
-          git push origin main
+          git push origin HEAD:main
