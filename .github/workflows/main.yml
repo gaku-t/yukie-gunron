@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Github Action for LaTeX
+      - name: GitHub Action for LaTeX
         uses: xu-cheng/latex-action@9ae8710583a967aa7f9773ab07c8695131b732b7  # v3.0.1
         with:
           root_file: main.tex
@@ -30,7 +30,6 @@ jobs:
 
       - name: Update PDF Link on README
         run: |
-          echo setting URL: ${{ fromJSON(steps.create_release.outputs.assets)[0].browser_download_url }}
           sed -i '/<!-- PDF_LINK_START -->/,/<!-- PDF_LINK_END -->/c\<!-- PDF_LINK_START -->\n最新版のPDFは[こちら](${{ fromJSON(steps.create_release.outputs.assets)[0].browser_download_url }})\n<!-- PDF_LINK_END -->' README.md
 
       - name: Commit Changes
@@ -38,6 +37,6 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add README.md
-          git commit -m "Update PDF link on README for version ${{ github.ref_name }}"
-          git pull --rebase origin HEAD:main
-          git push origin HEAD:main
+          git commit -m "[Automated] Update PDF link on README for version ${{ github.ref_name }}"
+          git pull --rebase origin main
+          git push origin main
