@@ -13,10 +13,10 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: GitHub Action for LaTeX
-        uses: xu-cheng/latex-action@9ae8710583a967aa7f9773ab07c8695131b732b7  # v3.0.1
+        uses: xu-cheng/latex-action@f1ca82cbed861b3534e2997dd584944f55b884ed  # v3.1.0
         with:
           root_file: main.tex
-          args: "-latex=uplatex"
+          latexmk_use_lualatex: true
 
       - name: Create Release
         id: create_release
