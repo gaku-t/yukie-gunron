@@ -802,7 +802,85 @@
 \end{ans}
 
 \begin{ans}
-  TODO: 後で書く.
+  $P$の元を左または右から掛けることは, 行列の基本変形 (の一部) に対応している.
+  具体的には, 行列の基本変形のうち以下のものを\textbf{除いた}操作のみが許される.
+  \begin{itemize}
+    \item 第$3$行の$x$倍を第$1$(or $2$)行に足す
+    \item 第$1$(or $2$)列の$x$倍を第$3$列に足す
+    \item 第$3$行 (列) をほかの行 (列) と交換する
+  \end{itemize}
+  そこで, $G$の任意の元$g$に対して, その第$3$列の値に注目して,
+  上\textbf{以外}の基本変形によって$w_1$または$w_2$に移せることを示す.\\
+  (i) $g$の$(1, 3)$成分または$(2, 3)$成分が非零の場合.\\
+  必要ならば第$1$行と第$2$行を入れ替えることで, $(1, 3)$成分が非零としてよい.
+  このとき, 第$1$行と第$3$列を掃き出して
+  \begin{align*}
+    \begin{pmatrix}
+      0 & 0 & 1 \\
+      ? & ? & 0 \\
+      ? & ? & 0
+    \end{pmatrix}
+  \end{align*}
+  とできる. $(2, 1)$成分と$(2, 2)$成分のいずれかは非零なので, そのいずれかに応じて
+  \begin{align*}
+    \begin{pmatrix}
+      0 & 0 & 1 \\
+      1 & 0 & 0 \\
+      0 & 1 & 0
+    \end{pmatrix}または
+    \begin{pmatrix}
+      0 & 0 & 1 \\
+      0 & 1 & 0 \\
+      1 & 0 & 0
+    \end{pmatrix}
+  \end{align*}
+  と変形できる. 後者からはさらに
+  \begin{align*}
+    \begin{pmatrix}
+      0 & 0 & 1 \\
+      0 & 1 & 0 \\
+      1 & 0 & 0
+    \end{pmatrix}
+    \rightarrow
+    \begin{pmatrix}
+      1 & 0 & 1 \\
+      0 & 1 & 0 \\
+      1 & 0 & 0
+    \end{pmatrix}
+    \rightarrow
+    \begin{pmatrix}
+      1 & 0 & 0 \\
+      0 & 1 & 0 \\
+      1 & 0 & -1
+    \end{pmatrix}
+    \rightarrow
+    \begin{pmatrix}
+      1 & 0 & 0 \\
+      0 & 1 & 0 \\
+      0 & 0 & -1
+    \end{pmatrix}
+    \rightarrow
+    \begin{pmatrix}
+      1 & 0 & 0 \\
+      0 & 1 & 0 \\
+      0 & 0 & 1
+    \end{pmatrix}
+  \end{align*}
+  と変形できるので, $w_1$と$w_2$のいずれかに変形できることがわかった.
+  \\
+  (ii) $g$の$(1, 3)$成分と$(2, 3)$成分がともに$0$の場合.\\
+  このとき$(3, 3)$成分は非零なので, 第$3$行を掃き出して (第3列はすでに掃き出されている),
+  \begin{align*}
+    \begin{pmatrix}
+      ? & ? & 0 \\
+      ? & ? & 0 \\
+      0 & 0 & 1
+    \end{pmatrix}
+  \end{align*}
+  とできる. 左上の$2 \times 2$行列についてはすべての基本変形が許されるので, これは$w_1$と同値である.
+
+  以上により, $G$の任意の元は$w_1$または$w_2$と同値であることがわかった.
+  $w_1$と$w_2$とが同値でないことは, $w_1 \in P$かつ$w_2 \notin P$であることから明らかである.
 \end{ans}
 
 \begin{ans}
@@ -1088,7 +1166,16 @@
 \end{ans}
 
 \begin{ans}
-  TODO: 後で書く.
+  写像$f: G/H \rightarrow (G/N)/(H/N)$を,
+  $aH \mapsto (aN)(H/N)$と定めたい.
+  \begin{align*}
+    &(aN)(H/N) = (bN)(H/N) \\
+    &\Leftrightarrow (aN)(b^{-1}N) \in H/N \\
+    &\Leftrightarrow ab^{-1}N \in H/N \\
+    &\Leftrightarrow ab^{-1} \in H \\
+  \end{align*}
+  であることから, $f$がwell-definedかつ単射であることがわかる.
+  また明らかに$f$は全射なので, $f$は全単射.
 \end{ans}
 
 \begin{ans}
@@ -1926,7 +2013,10 @@
 \end{ans}
 
 \begin{ans}
-  TODO: 後で書く.
+  $H$を左剰余類$G/H$に左から作用させることを考える.
+  この作用により$H \in G/H$は不動なので, $\order{G/H} = p$と命題4.1.24より$G/H$のすべての元が不動である.
+  このことは, $\forall h \in H$, $\forall g \in G$にたいして$hgH = gH$すなわち$g^{-1}hg \in H$であることを意味する.
+  したがって$H$は$G$の正規部分群である.
 \end{ans}
 
 \fakesubsection{4.5 シローの定理}
