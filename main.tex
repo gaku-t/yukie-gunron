@@ -2094,26 +2094,26 @@
   よって定理2.10.3より$HK$は部分群である.
   さらに$H \cap K = \{1_G\}$より$\order{HK} = 15$であることと例題4.5.8より
   $HK \simeq \mathbb{Z}/15\mathbb{Z}$.\\
-  (2) シロー$2$部分群が存在することから, 位数$2$の元$\rho$が存在することがわかる.
-  $\rho$による$G$への共役による作用を考える.
+  (2) シロー$2$部分群が存在することから, 位数$2$の元$g_2$が存在することがわかる.
+  $g_2$による$G$への共役による作用を考える.
   $HK$は$G$の正規部分群なので, この作用は$HK$への作用 (自己同型$\phi$) を引き起こす.
-  $HK$の位数$3$の元$\sigma$, 位数$5$の元$\tau$をとって固定すると,
-  $\phi(\sigma)$は$\sigma$か$\sigma^{-1}$のいずれか,
-  $\phi(\tau)$は$\tau$か$\tau^{-1}$のいずれかであることがわかる. ($\phi^2 = \mathrm{id}_{HK}$であることによる.)
+  $HK$の位数$3$の元$g_3$, 位数$5$の元$g_5$をとって固定すると,
+  $\phi(g_3)$は$g_3$か$g_3^{-1}$のいずれか,
+  $\phi(g_5)$は$g_5$か$g_5^{-1}$のいずれかであることがわかる. ($\phi^2 = \mathrm{id}_{HK}$であることによる.)
   以下, 場合分けして考える.\\
-  (2-i) $\phi(\sigma) = \sigma$かつ$\phi(\tau) = \tau$の場合.
-  このとき, $\rho$は$HK$および$\rho HK$の元と可換であることから, $\gen{\rho} \simeq \mathbb{Z}/2\mathbb{Z}$は$G$の正規部分群である.
-  したがって, 例4.5.8の後半と同様の議論により, $G \simeq \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/15\mathbb{Z} \simeq \mathbb{Z}/30\mathbb{Z}$.\\
-  (2-ii) $\phi(\sigma) = \sigma$かつ$\phi(\tau) = \tau^{-1}$の場合.
-  このとき, 命題4.1.10の関係式より$\gen{\rho, \tau} \simeq D_5$である.
-  明らかに$\gen{\sigma} \cap D_5 = \{1_G\}$.
-  また, $\sigma$が$\rho$および$\tau$と可換であることから,
-  $\gen{\sigma}$の元と$\gen{\rho, \tau}$の元とは可換である.
-  命題2.9.2の途中 ($hk = kh$) からの議論を適用することにより, $G \simeq \gen{\sigma} \times \gen{\rho, \tau} \simeq \mathbb{Z}/3\mathbb{Z} \times D_5$.\\
-  (2-iii) $\phi(\sigma) = \sigma^{-1}$かつ$\phi(\tau) = \tau$の場合.
+  (2-i) $\phi(g_3) = g_3$かつ$\phi(g_5) = g_5$の場合.
+  このとき, $g_2$は$HK$および$g_2 HK$の元と可換であることから, $\gen{g_2} \simeq \mathbb{Z}/2\mathbb{Z}$は$G$の正規部分群である.
+  したがって, 例題4.5.8の後半と同様の議論により, $G \simeq \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/15\mathbb{Z} \simeq \mathbb{Z}/30\mathbb{Z}$.\\
+  (2-ii) $\phi(g_3) = g_3$かつ$\phi(g_5) = g_5^{-1}$の場合.
+  このとき, $D_5$の関係式がみたされることから例題4.6.6と同様の議論により$\gen{g_2, g_5} \simeq D_5$である.
+  明らかに$\gen{g_3} \cap D_5 = \{1_G\}$.
+  また, $g_3$が$g_2$および$g_5$と可換であることから,
+  $\gen{g_3}$の元と$\gen{g_2, g_5}$の元とは可換である.
+  命題2.9.2の途中 ($hk = kh$) からの議論を適用することにより, $G \simeq \gen{g_3} \times \gen{g_2, g_5} \simeq \mathbb{Z}/3\mathbb{Z} \times D_5$.\\
+  (2-iii) $\phi(g_3) = g_3^{-1}$かつ$\phi(g_5) = g_5$の場合.
   上と同様にして, $G \simeq \mathbb{Z}/5\mathbb{Z} \times D_3$.\\
-  (2-iv) $\phi(\sigma) = \sigma^{-1}$かつ$\phi(\tau) = \tau^{-1}$の場合.
-  このとき, $\rho$と$HK$の元とは命題4.1.10の関係式をみたすので, $G \simeq D_{15}$.\\
+  (2-iv) $\phi(g_3) = g_3^{-1}$かつ$\phi(g_5) = g_5^{-1}$の場合.
+  このとき, $g_2$と$HK$の生成元は$D_{15}$の関係式をみたすので, 例題4.6.6と同様の議論により$G \simeq D_{15}$.\\
 \end{ans}
 
 \begin{ans}
@@ -2136,6 +2136,7 @@
 \end{ans}
 
 \begin{ans}
+  (第2版第1刷には問題文の誤植があるので, 正誤表を参照.)
   ここまでの演習問題と, $p$群が非可換単純群でないことよりしたがう.
 \end{ans}
 \end{document}
